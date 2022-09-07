@@ -1,0 +1,651 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background: url(/ublc/recursos/img/fondo.jpg);
+  background-attachment: fixed;
+}
+.todo
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.central
+{
+  width: 80%;
+  margin: auto;
+  margin-top: 2%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 20px;
+  grid-template-areas: "logo titulo titulo"
+              "formulario formulario formulario";
+  justify-content: center;
+  align-content: center;
+  background: #86B0A0;
+  border-radius: 20px;
+}
+
+.logo
+{
+  grid-area: logo;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px 5px;
+}
+.logo img
+{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+.titulo
+{
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 24px;
+  padding: 10px 0px;
+  box-sizing: content-box;
+  background: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.formulario
+{
+  grid-area: formulario;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "cedulaTitE          vacio             parentescoE"
+                       "cedulaTitC          vacio             parentescoC"
+                       "cedulaE         nombresE            apellidosE"
+                       "cedulaC         nombresC            apellidosC"
+                       "nacimientoE      sexoE              estCivilE"
+                       "nacimientoC      sexoC              estCivilC"
+                       "estadoE          ciudadE            direccionE"
+                       "estadoC          ciudadC            direccionC"
+                       "telefonoFijoE    telefonoCelularE   correoE"
+                       "telefonoFijoC    telefonoCelularC   correoC"
+                       "patologiasE      medicamentosE      observacionE"
+                       "patologiasC      medicamentosC      observacionC"
+                       "botones         botones          botones";
+  justify-items: center;
+  align-items: center;
+  padding: 5px 0px;
+  box-sizing: content-box;
+  background: #B5CCC2;
+  border-radius: 20px;
+}
+
+.cedulaTitE
+{
+  grid-area: cedulaTitE;
+  margin-top: 10px;
+}
+.cedulaTitC
+{
+  grid-area: cedulaTitC;
+}
+.parentescoE
+{
+  grid-area: parentescoE;
+  margin-top: 10px;
+}
+.parentescoC
+{
+  grid-area: parentescoC;
+  margin-top: 10px;
+}
+.nombresE
+{
+  grid-area: nombresE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.nombresC
+{
+  grid-area: nombresC;
+}
+.apellidosE
+{
+  grid-area: apellidosE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.apellidosC
+{
+  grid-area: apellidosC;
+}
+.cedulaE
+{
+  grid-area: cedulaE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.cedulaC
+{
+  grid-area: cedulaC;
+}
+
+.nacimientoE
+{
+  grid-area: nacimientoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.nacimientoC
+{
+  grid-area: nacimientoC;
+}
+.sexoE
+{
+  grid-area: sexoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.sexoC
+{
+  grid-area: sexoC;
+}
+.estCivilE
+{
+  grid-area: estCivilE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.estCivilC
+{
+  grid-area: estCivilC;
+}
+
+.estadoE
+{
+  grid-area: estadoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.estadoC
+{
+  grid-area: estadoC;
+}
+.ciudadE
+{
+  grid-area: ciudadE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.ciudadC
+{
+  grid-area: ciudadC;
+}
+.direccionE
+{
+  grid-area: direccionE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.direccionC
+{
+  grid-area: direccionC;
+  display: flex;
+  justify-self: stretch;
+  justify-content: center;
+  padding: 0px 5px;
+}
+
+.telefonoFijoE
+{
+  grid-area: telefonoFijoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+
+}
+.telefonoFijoC
+{
+  grid-area: telefonoFijoC;
+}
+.telefonoCelularE
+{
+  grid-area: telefonoCelularE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+
+}
+.telefonoCelularC
+{
+  grid-area: telefonoCelularC;
+}
+.correoE
+{
+  grid-area: correoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.correoC
+{
+  grid-area: correoC;
+}
+
+.tipoTrabajadorE
+{
+  grid-area: tipoTrabajadorE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+}
+.tipoTrabajadorC
+{
+  grid-area: tipoTrabajadorC;
+}
+.estTrabajoE
+{
+  grid-area: estTrabajoE;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+
+}
+.estTrabajoC
+{
+  grid-area: estTrabajoC;
+}
+.fechaIngresoE
+{
+  grid-area: fechaIngresoE;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+}
+.fechaIngresoC
+{
+  grid-area: fechaIngresoC;
+}
+
+.patologiasE
+{
+  grid-area: patologiasE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.patologiasC
+{
+  grid-area: patologiasC;
+  justify-self: stretch;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0px 5px;
+}
+.medicamentosE
+{
+  grid-area: medicamentosE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.medicamentosC
+{
+  grid-area: medicamentosC;
+  justify-self: stretch;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0px 5px;
+}
+.observacionE
+{
+  grid-area: observacionE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.observacionC
+{
+  grid-area: observacionC;
+  display: flex;
+  justify-self: stretch;
+  justify-content: center;
+  padding: 0px 5px;
+}
+
+.campoConMensaje
+{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.formulario label
+{
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 22px;
+}
+input
+{
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+input:hover
+{
+  color: #ffffff;
+  border: 1px solid #01579B;
+  background: #000000;
+}
+input[type="radio"]
+{
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+.sexoC
+{
+  padding: 5px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+select
+{
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+select:hover
+{
+  color: #ffffff;
+  border: 2px solid #01579B;
+  background: #000000;
+}
+textarea
+{
+  width: 90%;
+  resize: none;
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+textarea:hover
+{
+  color: #ffffff;
+  border: 1px solid #01579B;
+  background: #000000;
+}
+p
+{
+  text-align: center;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.botones
+{
+  grid-area: botones;
+  padding: 15px 0px;
+}
+.botones input
+{
+  font-family: Dungeon, "Arial Black";
+  font-size: 18px;
+  margin: 0px 4px;
+  padding: 6px 10px;
+  background: #4AB088;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0px;
+}
+.botones input:hover
+{
+  background: #66A55F;
+  color: black;
+}
+.botones input:active
+{
+  background: #E8F5E9;
+}
+
+.menu
+{
+  position: sticky;
+  width: 100%;
+  height: 100%;
+}
+
+.invocar
+{
+  float: right;
+  width: 3.5%;
+}
+.invocar img
+{
+  width: 100%;
+  height: 100%;
+}
+
+.esconder
+{
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 3.5%;
+}
+.esconder img
+{
+  width: 100%;
+  height: 100%;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+aside
+{
+  display: none;
+}
+aside:target
+{
+  float: right;
+  display: inline-block;
+  padding: 0px 0px;
+  background: #86B0A0;
+}
+nav
+{
+  padding: 8px 12px;
+  text-align: center;
+  font-family: serif, sans-serif,  Algerian;
+  font-size: 14px;
+  font-weight: bold;
+  background: #66A55F;
+  color: white;
+}
+nav:hover
+{
+  padding: 8px 10px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background: #86B0A0;
+  color: black;
+}
+nav:active
+{
+  background: #E8F5E9;
+}
+
+@media screen and (max-width: 768px)
+{
+  .central
+  {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-areas:
+    "logo      logo"
+    "titulo titulo"
+    "formulario formulario";
+  }
+  .logo
+  {
+    width: 60%;
+    justify-self: center;
+    border-radius: 20px;
+  }
+  .titulo
+  {
+    width: 90%;
+    justify-self: center;
+    font-size: 22px;
+    border-radius: 20px;
+  }
+  .formulario
+  {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "cedulaTitE cedulaTitC"
+    "parentescoE parentescoC"
+    "cedulaE cedulaC"
+    "nombresE nombresC"
+    "apellidosE apellidosC"
+    "nacimientoE nacimientoC"
+    "sexoE sexoC"
+    "estCivilE estCivilC"
+    "estadoE estadoC"
+    "ciudadE ciudadC"
+    "direccionE direccionC"
+    "telefonoFijoE telefonoFijoC"
+    "telefonoCelularE telefonoCelularC"
+    "correoE correoC"
+    "patologiasE patologiasC"
+    "medicamentosE medicamentosC"
+    "observacionE observacionC"
+    "botones botones";
+  }
+}
+@media screen and (max-width: 600px)
+{
+  .formulario
+  {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "cedulaTitE" "cedulaTitC"
+    "parentescoE" "parentescoC"
+    "cedulaE" "cedulaC"
+    "nombresE" "nombresC"
+    "apellidosE" "apellidosC"
+    "nacimientoE" "nacimientoC"
+    "sexoE"   "sexoC"
+    "estCivilE" "estCivilC"
+    "estadoE" "estadoC"
+    "ciudadE" "ciudadC"
+    "direccionE" "direccionC"
+    "telefonoFijoE" "telefonoFijoC"
+    "telefonoCelularE" "telefonoCelularC"
+    "correoE" "correoC"
+    "patologiasE" "patologiasC"
+    "medicamentosE" "medicamentosC"
+    "observacionE" "observacionC"
+    "botones";
+  }
+}

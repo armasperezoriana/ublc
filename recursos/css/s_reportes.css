@@ -1,0 +1,203 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background: url(/ublc/recursos/img/fondo.jpg);
+  background-attachment: fixed;
+}
+.todo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7% 1fr;
+  grid-template-areas: "menu" "central";
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.central{
+  grid-area: central;
+  justify-self: stretch;
+  align-self: stretch;
+  overflow: auto;
+  margin-bottom: 5px;
+  display: grid;
+  align-content: stretch;
+  align-items: center;
+  grid-template-areas:
+  "principal"
+  "footer";
+}
+
+.center
+{
+  grid-area: principal;
+  width: 45%;
+  margin: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "logo"
+  "titulo"
+  "formulario";
+  grid-row-gap: 10px;
+  justify-items: center;
+  padding: 12px 16px;
+  background: #86B0A0;
+  border-radius: 20px;
+  box-shadow: 10px;
+}
+
+.sismeu
+{
+  grid-area: logo;
+  width: 33%;
+}
+.sismeu img
+{
+  width: 100%;
+}
+h1
+{
+  color: #ffffff;
+  text-align: center;
+}
+h3, h4
+{
+  color: #000000;
+  text-align: center;
+}
+
+.titulo
+{
+  grid-area: titulo;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 14px;
+}
+.subtitulo
+{
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 22px;
+}
+
+.buscarReporte
+{
+  grid-area: formulario;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+label
+{
+  grid-column: span 2;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 22px;
+}
+
+select
+{
+  grid-column: span 2;
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+
+select:hover
+{
+  color: #ffffff;
+  border: 2px solid #01579B;
+  background: #000000;
+}
+.selectDinamico
+{
+  display: none;
+}
+input
+{
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+input:hover
+{
+  color: #ffffff;
+  border: 2px solid #01579B;
+  background: #000000;
+}
+
+button
+{
+  font-family: Dungeon, "Arial Black";
+  font-size: 18px;
+  padding: 6px 10px;
+  background: #4AB088;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0px;
+}
+button:hover
+{
+  background: #66A55F;
+  color: black;
+}
+button:active
+{
+  background: #E8F5E9;
+}
+
+.enviar
+{
+  grid-column: span 2;
+  margin-top: 10px;
+}
+
+footer
+{
+  grid-area: footer;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  margin-top: 7.5px;
+  padding: 5px 15px;
+  font-family: Arial, calibri;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(134, 176, 160, 0.5);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px)
+{
+  .center
+  {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 600px)
+{
+  .center
+  {
+    width: 75%;
+  }
+}

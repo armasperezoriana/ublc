@@ -1,0 +1,218 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background: url(/ublc/recursos/img/fondo.jpg);
+  background-attachment: fixed;
+}
+.todo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7% 1fr;
+  grid-template-areas: "menu" "central";
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.central{
+  grid-area: central;
+  justify-self: stretch;
+  align-self: stretch;
+  overflow: auto;
+  margin-bottom: 5px;
+  display: grid;
+  align-content: stretch;
+  align-items: center;
+  grid-template-areas:
+  "principal"
+  "footer";
+}
+
+.center
+{
+  grid-area: principal;
+  justify-self: stretch;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "cabecera";
+  justify-items: center;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 20px;
+  box-sizing: content-box;
+}
+
+h1
+{
+  text-align: center;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 34px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.cabecera
+{
+  width: 35%;
+  padding: 5px;
+  grid-area: cabecera;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "logo titulo";
+  justify-items: center;
+  align-items: center;
+  background: #769B8D;
+  border-radius: 20px;
+}
+.titulo
+{
+  grid-area: titulo;
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 20px;
+}
+.logo
+{
+  grid-area: logo;
+  width: 50%;
+}
+.logo img
+{
+  width: 100%;
+  height: 100%;
+}
+
+.usuarios
+{
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "titulo"
+  "contenido"
+  "botones";
+  justify-items: center;
+  align-items: center;
+}
+.contenidoUsuario
+{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+  align-items: center;
+  background: #86B0A0;
+  border-radius: 20px;
+}
+.botones
+{
+  grid-area: botones;
+  justify-self: center;
+  margin-top: 5px;
+  display: flex;
+  justify-content: stretch;
+  justify-items: center;
+}
+
+.contenidoUsuarios
+{
+  display: none;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+  align-items: center;
+  background: #86B0A0;
+  border-radius: 20px;
+}
+
+
+.subtitulo_informacion
+{
+  grid-area: titulo;
+  width: 60%;
+  padding: 10px;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 30px;
+  text-align: center;
+  background: #65A55E;
+  color: #ffffff;
+  border-radius: 20px;
+}
+.subtitulo_informacion:hover
+{
+  background: #66BB6A;
+  color: black;
+  border-radius: 10px;
+}
+.subtitulo_informacion:active
+{
+  background: #E8F5E9;
+  border-radius: 0px;
+}
+
+.subtitulo
+{
+  padding: 10px 15px;
+  justify-self: stretch;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  background: #49AD86;
+  box-sizing: content-box;
+}
+.subtitulo_dato
+{
+  padding: 10px 15px;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 22px;
+  text-align: center;
+  color: #000000;
+}
+
+button
+{
+  font-family: Dungeon, "Arial Black";
+  font-size: 18px;
+  margin: 0px 4px;
+  padding: 6px 10px;
+  background: #4AB088;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0px;
+}
+button:hover
+{
+  background: #66A55F;
+  color: black;
+}
+button:active
+{
+  background: #E8F5E9;
+}
+
+.nombreUsuario:hover
+{
+  justify-self: stretch;
+  align-self: center;
+  background: #66A55F;
+  color: black;
+  border-radius: 20px;
+}
+.nombreUsuario:active
+{
+  background: #E8F5E9;
+}

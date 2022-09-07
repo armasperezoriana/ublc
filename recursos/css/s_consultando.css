@@ -1,0 +1,546 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background: url(/ublc/recursos/img/fondo.jpg);
+  background-attachment: fixed;
+}
+.todo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7% 1fr;
+  grid-template-areas: "menu" "central";
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.central{
+  grid-area: central;
+  justify-self: stretch;
+  align-self: stretch;
+  overflow: auto;
+  margin-bottom: 5px;
+  display: grid;
+  align-content: stretch;
+  align-items: center;
+}
+.center{
+  width: 55%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 20px;
+  grid-template-areas:
+  "logo       titulo     titulo"
+  "contenido  contenido  contenido";
+  justify-content: center;
+  align-content: center;
+  background: #86B0A0;
+  border-radius: 20px;
+}
+
+.logo
+{
+  grid-area: logo;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px 5px;
+}
+.logo img
+{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+.titulo
+{
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 24px;
+  padding: 10px 0px;
+  box-sizing: content-box;
+  background: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.consulta
+{
+  grid-area: contenido;
+  display: grid;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+  grid-template-columns: 45% 1fr;
+  grid-template-areas:
+ "subtitulo subtitulo"
+  "nombres nombresC"
+  "apellidos apellidosC"
+  "cedula cedulaC"
+  "nacimiento nacimientoC"
+  "sexo sexoC"
+  "estCivil estCivilC"
+  "direccion direccionC"
+  "telefonoFijo telefonoFijoC"
+  "telefonoCelular telefonoCelularC"
+  "correo correoC"
+  "tipoTrabajador tipoTrabajadorC"
+  "estTrabajo estTrabajoC"
+  "fechaIngreso fechaIngresoC"
+  "patologias patologiasC"
+  "medicamentos medicamentosC"
+  "beneficiarios beneficiarios"
+  "regresar regresar";
+  justify-items: start;
+  align-items: center;
+  padding: 10px 20px;
+  background: #6E887D;
+  border-radius: 20px;
+}
+
+.consultaBene
+{
+  grid-area: contenido;
+  display: grid;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+  grid-template-columns: 45% 1fr;
+  grid-template-areas:
+  "subtitulo subtitulo"
+  "nombres nombresC"
+  "apellidos apellidosC"
+  "cedula cedulaC"
+  "nacimiento nacimientoC"
+  "sexo sexoC"
+  "estCivil estCivilC"
+  "direccion direccionC"
+  "telefonoFijo telefonoFijoC"
+  "telefonoCelular telefonoCelularC"
+  "correo correoC"
+  "patologias patologiasC"
+  "medicamentos medicamentosC"
+  "parentesco parentescoC"
+  "titular titular"
+  "regresar regresar";
+  justify-items: start;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: content-box;
+  background: #6E887D;
+  border-radius: 20px;
+}
+
+h2
+{
+  font-family: Calibri ,"Cooper Black",  Algerian;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+h2 b
+{
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: #000000;
+}
+
+.subtitulo
+{
+  grid-area: subtitulo;
+  justify-self: center;
+  padding: 5px 10px;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 26px;
+  text-align: center;
+  background: #86B0A0;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.subtitle
+{
+  justify-self: stretch;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #B5CCC2;
+  color: #000000;
+  border-radius: 18px;
+  padding: 8px 8px;
+}
+
+.nombres
+{
+  grid-area: nombres;
+}
+.nombresC
+{
+  grid-area: nombresC;
+}
+
+.apellidos
+{
+  grid-area: apellidos;
+}
+.apellidosC
+{
+  grid-area: apellidosC;
+}
+
+.cedula
+{
+  grid-area: cedula;
+}
+
+.cedulaC
+{
+  grid-area: cedulaC;
+}
+.nacimiento
+{
+  grid-area: nacimiento;
+}
+.nacimientoC
+{
+  grid-area: nacimientoC;
+}
+
+.sexo
+{
+  grid-area: sexo;
+}
+.sexoC
+{
+  grid-area: sexoC;
+}
+
+
+.estCivil
+{
+  grid-area: estCivil;
+}
+.estCivilC
+{
+  grid-area: estCivilC;
+}
+
+.estado
+{
+  grid-area: estado;
+}
+.estadoC
+{
+  grid-area: estadoC;
+}
+
+.ciudad
+{
+  grid-area: ciudad;
+}
+.ciudadC
+{
+  grid-area: ciudadC;
+}
+.direccion
+{
+  grid-area: direccion;
+}
+.direccionC
+{
+  grid-area: direccionC;
+}
+.direccionC h2
+{
+  font-size: 18px;
+}
+
+.telefonoFijo
+{
+  grid-area: telefonoFijo;
+}
+
+.telefonoFijoC
+{
+  grid-area: telefonoFijoC;
+}
+.telefonoCelular
+{
+  grid-area: telefonoCelular;
+}
+.telefonoCelularC
+{
+  grid-area: telefonoCelularC;
+}
+.correo
+{
+  grid-area: correo;
+}
+.correoC
+{
+  grid-area: correoC;
+}
+
+.tipoTrabajador
+{
+  grid-area: tipoTrabajador;
+}
+.tipoTrabajadorC
+{
+  grid-area: tipoTrabajadorC;
+}
+.estTrabajo
+{
+  grid-area: estTrabajo;
+}
+.estTrabajoC
+{
+  grid-area: estTrabajoC;
+}
+.fechaIngreso
+{
+  grid-area: fechaIngreso;
+}
+
+.fechaIngresoC
+{
+  grid-area: fechaIngresoC;
+}
+
+.observacion
+{
+  grid-area: observacion;
+}
+.observacionC
+{
+  grid-area: observacionC;
+}
+
+.parentesco
+{
+  grid-area: parentesco;
+}
+.parentescoC
+{
+  grid-area: parentescoC;
+}
+
+.patologias
+{
+   grid-area: patologias;
+}
+.patologiasC
+{
+   grid-area: patologiasC;
+}
+.medicamentos
+{
+  grid-area: medicamentos;
+}
+.medicamentosC
+{
+  grid-area: medicamentosC;
+}
+
+.titular
+{
+  grid-area: titular;
+  justify-self: stretch;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "titulo         titulo";
+  grid-row-gap: 15px;
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+.titular .subtitulo
+{
+  grid-area: titulo;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+.titular h2
+{
+  text-align: center;
+}
+
+.beneficiarios
+{
+  grid-area: beneficiarios;
+  justify-self: stretch;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "titulo         titulo     titulo";
+  grid-row-gap: 15px;
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+.beneficiarios .subtitulo
+{
+  grid-area: titulo;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+.beneficiarios h2
+{
+  text-align: center;
+}
+
+a
+{
+  justify-self: center;
+}
+
+.regresando
+{
+  grid-area: regresar;
+  justify-self: center;
+}
+.consultaPDF
+{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+button
+{
+  margin: 0px 5px;
+  padding: 6px 10px;
+  font-family: Dungeon, "Arial Black";
+  font-size: 18px;
+  background: #4AB088;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0px;
+}
+button:hover
+{
+  background: #66A55F;
+  color: black;
+}
+button:active
+{
+  background: #E8F5E9;
+}
+
+@media screen and (max-width: 768px)
+{
+  .center
+  {
+    width: 75%;
+    grid-template-areas:
+    "logo       logo     logo"
+    "titulo       titulo     titulo"
+    "contenido  contenido  contenido";
+  }
+  .logo
+  {
+    width: 60%;
+    justify-self: center;
+    border-radius: 20px;
+  }
+  .titulo
+  {
+    width: 90%;
+    justify-self: center;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .center
+  {
+    width: 85%;
+  }
+  .consulta
+  {
+    width: 90%;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+   "subtitulo"
+    "nombres" "nombresC"
+    "apellidos" "apellidosC"
+    "cedula" "cedulaC"
+    "nacimiento" "nacimientoC"
+    "sexo" "sexoC"
+    "estCivil" "estCivilC"
+    "direccion" "direccionC"
+    "telefonoFijo" "telefonoFijoC"
+    "telefonoCelular" "telefonoCelularC"
+    "correo" "correoC"
+    "tipoTrabajador" "tipoTrabajadorC"
+    "estTrabajo" "estTrabajoC"
+    "fechaIngreso" "fechaIngresoC"
+    "patologias" "patologiasC"
+    "medicamentos" "medicamentosC"
+    "beneficiarios"
+    "regresar";
+    justify-items: center;
+  }
+  .beneficiarios
+  {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "titulo";
+    grid-row-gap: 20px;
+  }
+
+  .consultaBene
+  {
+    width: 90%;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+   "subtitulo"
+    "nombres" "nombresC"
+    "apellidos" "apellidosC"
+    "cedula" "cedulaC"
+    "nacimiento" "nacimientoC"
+    "sexo" "sexoC"
+    "estCivil" "estCivilC"
+    "direccion" "direccionC"
+    "telefonoFijo" "telefonoFijoC"
+    "telefonoCelular" "telefonoCelularC"
+    "correo" "correoC"
+    "patologias" "patologiasC"
+    "medicamentos" "medicamentosC"
+    "observacion" "observacionC"
+    "parentesco" "parentescoC"
+    "titular"
+    "regresar";
+    justify-items: center;
+  }
+}

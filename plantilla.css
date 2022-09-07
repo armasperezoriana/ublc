@@ -1,0 +1,28 @@
+<?php $this->vista("menu"); ?>
+
+.todo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7% 1fr;
+  grid-template-areas: "menu" "central";
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.central{
+  grid-area: central;
+  justify-self: stretch;
+  align-self: stretch;
+  overflow: auto;
+  margin-bottom: 5px;
+  display: grid;
+  align-content: stretch;
+  align-items: center;
+}
+
+.center{

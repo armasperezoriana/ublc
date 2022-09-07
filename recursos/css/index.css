@@ -1,0 +1,209 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background: url(/ublc/recursos/img/fondo.jpg);
+  background-attachment: fixed;
+}
+.todo
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.central
+{
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: grid;
+  grid-template-areas:
+  "principal"
+  "footer";
+}
+
+.center
+{
+  grid-area: principal;
+  width: 35%;
+  margin: auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo"
+                       "titulo"
+                       "formulario"
+                       "recuperar"
+                       "mensajito";
+  justify-items: center;
+  padding: 12px 16px;
+  background: #86B0A0;
+  border-radius: 20px;
+  box-shadow: 10px;
+}
+
+.logo
+{
+  width: 33%;
+}
+.logo img
+{
+  width: 100%;
+}
+
+.titulo
+{
+  grid-area: titulo;
+  justify-items: center;
+  text-align: center;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+}
+
+
+.formulario
+{
+  grid-area: formulario;
+  display: grid;
+  justify-self: stretch;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-template-areas:
+   "usuario   usuario"
+   "clave     clave"
+   "botones   botones";
+  padding: 10px;
+}
+
+
+.usuarioC
+{
+  grid-area: usuario;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.usuario
+{
+  width: 100%;
+  padding: 5px;
+  font-family: calibri, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+
+
+.claveC
+{
+  grid-area: clave;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  font-family: serif, sans-serif ;
+  font-size: 18px;
+}
+
+.clave
+{
+  width: 100%;
+  padding: 5px;
+  font-family: calibri, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+
+.usuario:hover, .clave:hover
+{
+  background: #6BB6BC;
+  color: white;
+  border: 2px solid #6BB6BC;
+}
+
+
+.botones
+{
+  grid-area: botones;
+  display: flex;
+  justify-items: center;
+  padding: 5px 10px;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+.botones input
+{
+  font-family: Dungeon, "Arial Black";
+  font-size: 18px;
+  padding: 5px 10px;
+  background: #4B5A53;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+}
+.botones input:hover
+{
+  background: #6BB6BC;
+  color: white;
+}
+.botones input:active
+{
+  background: #4066AF;
+}
+
+footer
+{
+  grid-area: footer;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  margin-top: 7.5px;
+  padding: 5px 15px;
+  font-family: Arial, calibri;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(134, 176, 160, 0.5);
+  border-radius: 10px;
+}
+
+.recuperar
+{
+  grid-area: recuperar;
+  text-decoration: underline;
+  font-style: italic;
+}
+.recuperar a
+{
+  text-decoration: none;
+  color: #616161;
+}
+
+.mensajito
+{
+  grid-area: mensajito;
+  margin-top: 5px;
+}

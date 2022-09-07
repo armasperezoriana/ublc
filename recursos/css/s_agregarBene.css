@@ -1,0 +1,704 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background: url(/ublc/recursos/img/fondo.jpg);
+  background-attachment: fixed;
+}
+.todo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7% 1fr;
+  grid-template-areas: "menu" "central";
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.central{
+  grid-area: central;
+  justify-self: stretch;
+  align-self: stretch;
+  overflow: auto;
+  margin-bottom: 5px;
+  display: grid;
+  align-content: stretch;
+  align-items: center;
+}
+.center{
+  width: 80%;
+  margin: auto;
+  margin-top: 2%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "logo       titulo       titulo"
+  "titulares    beneficiario  vacio"
+  "formulario formulario    formulario";
+  justify-content: center;
+  align-content: center;
+  background: #86B0A0;
+  border-radius: 20px;
+}
+
+.logo
+{
+  grid-area: logo;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px 5px;
+}
+.logo img
+{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+.titulo
+{
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 24px;
+  padding: 10px 0px;
+  box-sizing: content-box;
+  background: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.titular
+{
+  grid-area: titulares;
+  justify-self: center;
+  width: 70%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 16px;
+  background: #49B087;
+  color: #ffffff;
+  border: 2px solid #000000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.beneficiario
+{
+  grid-area: beneficiario;
+  justify-self: center;
+  width: 70%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 16px;
+  background: #6E887D;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+.titular:hover, .beneficiario:hover
+{
+  color: black;
+}
+.titular:active, .beneficiario:active
+{
+  background: #E8F5E9;
+}
+
+.formulario
+{
+  grid-area: formulario;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "cedulaTitE          vacio           parentescoE"
+                       "cedulaTitC          vacio           parentescoC"
+                       "cedulaE         nombresE            apellidosE"
+                       "cedulaC         nombresC            apellidosC"
+                       "nacimientoE      sexoE              estCivilE"
+                       "nacimientoC      sexoC              estCivilC"
+                       "direccionE       direccionC          vacioD"
+                       "direccionE       direccionC          vacioD"
+                       "telefonoFijoE    telefonoCelularE   correoE"
+                       "telefonoFijoC    telefonoCelularC   correoC"
+                       "botones         botones          botones";
+  justify-items: center;
+  align-items: center;
+  padding: 5px 0px;
+  box-sizing: content-box;
+  background: #B5CCC2;
+  border-top: 2px solid #ffffff;
+  border-radius: 20px;
+}
+
+.cedulaTitE
+{
+  grid-area: cedulaTitE;
+  margin-top: 10px;
+}
+.cedulaTitC
+{
+  grid-area: cedulaTitC;
+}
+.parentescoE
+{
+  grid-area: parentescoE;
+  margin-top: 10px;
+}
+.parentescoC
+{
+  grid-area: parentescoC;
+  margin-top: 10px;
+}
+.nombresE
+{
+  grid-area: nombresE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  text-align: center;
+}
+.nombresC
+{
+  grid-area: nombresC;
+}
+.apellidosE
+{
+  grid-area: apellidosE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  text-align: center;
+}
+.apellidosC
+{
+  grid-area: apellidosC;
+}
+.cedulaE
+{
+  grid-area: cedulaE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  text-align: center;
+}
+.cedulaC
+{
+  grid-area: cedulaC;
+}
+
+.nacimientoE
+{
+  grid-area: nacimientoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.nacimientoC
+{
+  grid-area: nacimientoC;
+}
+.sexoE
+{
+  grid-area: sexoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.sexoC
+{
+  grid-area: sexoC;
+}
+.estCivilE
+{
+  grid-area: estCivilE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.estCivilC
+{
+  grid-area: estCivilC;
+}
+
+.estadoE
+{
+  grid-area: estadoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.estadoC
+{
+  grid-area: estadoC;
+}
+.ciudadE
+{
+  grid-area: ciudadE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.ciudadC
+{
+  grid-area: ciudadC;
+}
+.direccionE
+{
+  grid-area: direccionE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.direccionC
+{
+  grid-area: direccionC;
+  display: flex;
+  justify-self: stretch;
+  justify-content: center;
+  padding: 0px 5px;
+}
+
+.telefonoFijoE
+{
+  grid-area: telefonoFijoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+
+}
+.telefonoFijoC
+{
+  grid-area: telefonoFijoC;
+}
+.telefonoCelularE
+{
+  grid-area: telefonoCelularE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+
+}
+.telefonoCelularC
+{
+  grid-area: telefonoCelularC;
+}
+.correoE
+{
+  grid-area: correoE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.correoC
+{
+  grid-area: correoC;
+}
+
+.tipoTrabajadorE
+{
+  grid-area: tipoTrabajadorE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+}
+.tipoTrabajadorC
+{
+  grid-area: tipoTrabajadorC;
+}
+.estTrabajoE
+{
+  grid-area: estTrabajoE;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+
+}
+.estTrabajoC
+{
+  grid-area: estTrabajoC;
+}
+.fechaIngresoE
+{
+  grid-area: fechaIngresoE;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+}
+.fechaIngresoC
+{
+  grid-area: fechaIngresoC;
+}
+
+.patologiasE
+{
+  grid-area: patologiasE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.patologiasC
+{
+  grid-area: patologiasC;
+  justify-self: stretch;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0px 5px;
+}
+.medicamentosE
+{
+  grid-area: medicamentosE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.medicamentosC
+{
+  grid-area: medicamentosC;
+  justify-self: stretch;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0px 5px;
+}
+.observacionE
+{
+  grid-area: observacionE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.observacionC
+{
+  grid-area: observacionC;
+  display: flex;
+  justify-self: stretch;
+  justify-content: center;
+  padding: 0px 5px;
+}
+
+.campoConMensaje
+{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+label
+{
+  font-family: "Cooper Black",  Algerian, sans-serif;
+  font-size: 22px;
+}
+input
+{
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+input:hover
+{
+  color: #ffffff;
+  border: 2px solid #01579B;
+  background: #000000;
+}
+input[type="radio"]
+{
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+
+p
+{
+  text-align: center;
+  font-family: serif ,sans-serif,  Algerian;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+}
+.sexoC
+{
+  padding: 5px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+select
+{
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+select:hover
+{
+  color: #ffffff;
+  border: 2px solid #01579B;
+  background: #000000;
+}
+textarea
+{
+  width: 90%;
+  resize: none;
+  padding: 5px;
+  font-family:  sans-serif,"Times New Roman";
+  font-size: 16px;
+  background: #6E887D;
+  color: white;
+  border: 2px solid #6E887D;
+  border-radius: 18px;
+}
+textarea:hover
+{
+  color: #ffffff;
+  border: 2px solid #01579B;
+  background: #000000;
+}
+
+.botones
+{
+  grid-area: botones;
+  padding: 15px 0px;
+}
+.botones input, .botonesRestaurar button
+{
+  font-family: Dungeon, "Arial Black";
+  font-size: 18px;
+  margin: 0px 4px;
+  padding: 6px 10px;
+  background: #4AB088;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0px;
+}
+.botones input:hover, .botonesRestaurar button:hover
+{
+  background: #66A55F;
+  color: black;
+}
+.botones input:active, .botonesRestaurar button:active
+{
+  background: #E8F5E9;
+}
+
+.alertaRestaurar
+{
+  background: rgba(189, 189, 189, 0.5);
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-items: center;
+  align-items: center;
+}
+.mensajeRestaurar
+{
+  width: 40%;
+  margin: auto;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "logo"
+  "titulo"
+  "botones";
+  justify-items: center;
+  padding: 12px 16px;
+  background: #86B0A0;
+  border-radius: 20px;
+  box-shadow: 10px;
+}
+
+.logoRestaurar
+{
+  grid-area: logo;
+  width: 33%;
+}
+.logoRestaurar img
+{
+  width: 100%;
+}
+.tituloRestaurar
+{
+  grid-area: titulo;
+  text-align: center;
+}
+
+.botonesRestaurar
+{
+  grid-area: botones;
+}
+
+@media screen and (max-width: 768px)
+{
+  .center
+  {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "logo      logo"
+    "titulo titulo"
+    "titulares    beneficiario"
+    "formulario formulario";
+  }
+  .logo
+  {
+    width: 60%;
+    justify-self: center;
+    border-radius: 20px;
+  }
+  .titulo
+  {
+    width: 90%;
+    justify-self: center;
+    font-size: 22px;
+    border-radius: 20px;
+  }
+  .titular, .beneficiario
+  {
+    font-size: 12px;
+  }
+
+  .formulario
+  {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "cedulaTitE cedulaTitC"
+    "parentescoE parentescoC"
+    "cedulaE cedulaC"
+    "nombresE nombresC"
+    "apellidosE apellidosC"
+    "nacimientoE nacimientoC"
+    "sexoE sexoC"
+    "estCivilE estCivilC"
+    "direccionE direccionC"
+    "telefonoFijoE telefonoFijoC"
+    "telefonoCelularE telefonoCelularC"
+    "correoE correoC"
+    "botones botones";
+  }
+}
+@media screen and (max-width: 600px)
+{
+  .formulario
+  {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "cedulaTitE" "cedulaTitC"
+    "parentescoE" "parentescoC"
+    "cedulaE" "cedulaC"
+    "nombresE" "nombresC"
+    "apellidosE" "apellidosC"
+    "nacimientoE" "nacimientoC"
+    "sexoE"   "sexoC"
+    "estCivilE" "estCivilC"
+    "direccionE" "direccionC"
+    "telefonoFijoE" "telefonoFijoC"
+    "telefonoCelularE" "telefonoCelularC"
+    "correoE" "correoC"
+    "botones";
+  }
+  .botones
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
+  }
+}
